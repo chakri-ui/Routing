@@ -1,0 +1,178 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark bg-primary sticky-top"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand>
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" height="30" alt="" />
+    </a>
+  </mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav ml-5">
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/employees" mdbWavesEffect
+          >Employees<span class="sr-only"></span
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/sports" mdbWavesEffect
+          >Sports</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/aboutus" mdbWavesEffect
+          >About US</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          style="margin-right: 600px"
+          routerLink="/feedback"
+          mdbWavesEffect
+          >Feedback</a
+        >
+      </li>
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->
+
+<!--Section: Products v.4-->
+<section class="pb-3 text-center">
+  <!--Section heading-->
+  <h2 class="h1 py-5">Sports</h2>
+
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <!--Collection card-->
+      <mdb-card class="collection-card z-depth-1-half">
+        <!--Card image-->
+        <div class="view zoom waves-light container-fluid" mdbWavesEffect>
+          <mdb-card-img
+            src="https://images.unsplash.com/photo-1602211844066-d3bb556e983b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHRlbm5pc3xlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          ></mdb-card-img>
+          <div class="stripe dark">
+            <a>
+              <p>
+                Tennis
+                <mdb-icon fas icon="angle-right"></mdb-icon>
+              </p>
+            </a>
+          </div>
+        </div>
+        <!--Card image-->
+      </mdb-card>
+      <!--Collection card-->
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <!--Collection card-->
+      <mdb-card class="collection-card z-depth-1-half">
+        <!--Card image-->
+        <div class="view zoom waves-light" mdbWavesEffect>
+          <mdb-card-img
+            src="https://images.unsplash.com/photo-1603722039047-bc9997bfa963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGNyaWNrZXQlMjBzcG9ydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          ></mdb-card-img>
+          <div class="stripe light">
+            <a>
+              <p>
+                Cricket
+                <mdb-icon fas icon="angle-right"></mdb-icon>
+              </p>
+            </a>
+          </div>
+        </div>
+        <!--Card image-->
+      </mdb-card>
+      <!--Collection card-->
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <!--Collection card-->
+      <mdb-card class="collection-card z-depth-1-half">
+        <!--Card image-->
+        <div class="view zoom waves-light" mdbWavesEffect>
+          <mdb-card-img
+            src="https://images.unsplash.com/photo-1601512986351-9b0e01780eef?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dm9sbGV5YmFsbHxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          ></mdb-card-img>
+          <div class="stripe dark">
+            <a>
+              <p>
+                Volleyball
+                <mdb-icon fas icon="angle-right"></mdb-icon>
+              </p>
+            </a>
+          </div>
+        </div>
+        <!--Card image-->
+      </mdb-card>
+      <!--Collection card-->
+    </div>
+    <!--Grid column-->
+
+    <!--Fourth column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <!--Collection card-->
+      <mdb-card class="collection-card z-depth-1-half">
+        <!--Card image-->
+        <div class="view zoom waves-light" mdbWavesEffect>
+          <mdb-card-img
+            src="https://images.unsplash.com/photo-1600679472829-3044539ce8ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb3RiYWxsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          ></mdb-card-img>
+          <div class="stripe light">
+            <a>
+              <p>
+                Football
+                <mdb-icon fas icon="angle-right"></mdb-icon>
+              </p>
+            </a>
+          </div>
+        </div>
+        <!--Card image-->
+      </mdb-card>
+      <!--Collection card-->
+    </div>
+    <!--Fourth column-->
+  </div>
+  <!--Grid row-->
+</section>
+<!--Section: Products v.4-->
+<form
+  class="form-inline waves-light mt-5 mr-5"
+  mdbWavesEffect
+  style="justify-content: center"
+>
+  <div class="md-form my-0">
+    <form class="d-flex">
+      <a href="" routerLink="/allsports">
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <mdb-icon fas icon="volleyball-ball"></mdb-icon>
+          Show all Sports
+        </button>
+      </a>
+    </form>
+  </div>
+</form>

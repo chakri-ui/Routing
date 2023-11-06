@@ -1,0 +1,191 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark bg-primary sticky-top"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand>
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" height="30" alt="" />
+    </a>
+  </mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav ml-5">
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/employees" mdbWavesEffect
+          >Employees<span class="sr-only"></span
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/sports" mdbWavesEffect
+          >Sports</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/aboutus" mdbWavesEffect
+          >About US</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/feedback" mdbWavesEffect
+          >Feedback</a
+        >
+      </li>
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->
+<!-- Material form login -->
+
+<div class="container my-5">
+  <div class="d-flex justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title text-primary text-center">Give us feedback</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+            <div class="mb-2">
+              <div class="col">
+                <div class="form-group">
+                  <label for="firstName"
+                    ><mdb-icon
+                      fas
+                      icon="user-alt"
+                      class="text-primary"
+                    ></mdb-icon>
+                    First name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="firstName"
+                    formControlName="firstName"
+                    placeholder="Enter your first name"
+                  />
+                  <span
+                    *ngIf="
+                      !feedbackForm.get('firstName')?.valid &&
+                      feedbackForm.get('firstName')?.touched
+                    "
+                    class="help-block text-danger small"
+                    >required</span
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="lastName"
+                    ><mdb-icon
+                      fas
+                      icon="user-alt"
+                      class="text-primary"
+                    ></mdb-icon>
+                    Last name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="lastName"
+                    formControlName="lastName"
+                    placeholder="Enter your last name"
+                  />
+                  <span
+                    *ngIf="
+                      !feedbackForm.get('lastName')?.valid &&
+                      feedbackForm.get('lastName')?.touched
+                    "
+                    class="help-block text-danger small"
+                    >required</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2">
+              <div class="form-group">
+                <label for="email"
+                  ><i class="fas fa-envelope text-primary"></i> Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  formControlName="email"
+                  placeholder="abc@gmail.com"
+                />
+                <span
+                  *ngIf="
+                    !feedbackForm.get('email')?.valid &&
+                    feedbackForm.get('email')?.touched
+                  "
+                  class="help-block text-danger small"
+                  >Please Enter a valid email</span
+                >
+              </div>
+              <div class="">
+                <label for="mobNo"
+                  ><i class="fas fa-phone-alt text-primary"></i> Mobile
+                  no</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  name="mobNo"
+                  formControlName="mobNo"
+                  pattern="[789][0-9]{9}"
+                  placeholder="9876543210"
+                />
+                <span
+                  *ngIf="
+                    !feedbackForm.get('mobNo')?.valid &&
+                    feedbackForm.get('mobNo')?.touched
+                  "
+                  class="help-block text-danger small"
+                  >Please Enter a valid mobile number</span
+                >
+              </div>
+            </div>
+            <div class="col mb-2">
+              <label for="feedback"
+                ><i class="fas fa-comment text-primary"></i> Feedback</label
+              >
+              <textarea
+                name="feedback"
+                id="feedback"
+                class="form-control"
+                formControlName="feedback"
+                placeholder="Please provide your valuable comments here"
+              ></textarea>
+              <span
+                *ngIf="
+                  !feedbackForm.get('feedback')?.valid &&
+                  feedbackForm.get('feedback')?.touched
+                "
+                class="help-block text-danger small"
+                >Post your feedback</span
+              >
+            </div>
+            <div class="row">
+              <div class="text-center">
+                <button
+                  [disabled]="!feedbackForm.valid"
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Material form login -->

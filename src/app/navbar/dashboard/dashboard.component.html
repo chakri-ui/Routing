@@ -1,0 +1,119 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark bg-primary sticky-top"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand>
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" height="30" alt="" />
+    </a>
+  </mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav ml-5">
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/employees" mdbWavesEffect
+          >Employees<span class="sr-only"></span
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/sports" mdbWavesEffect
+          >Sports</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/aboutus" mdbWavesEffect
+          >About US</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/feedback" mdbWavesEffect
+          >Feedback</a
+        >
+      </li>
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->
+<!-- Main navigation -->
+<header>
+  <!-- Full Page Intro -->
+  <div
+    class="view-main"
+    style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/architecture.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    "
+  >
+    <!-- Mask & flexbox options-->
+    <div
+      class="
+        mask
+        rgba-gradient
+        d-flex
+        justify-content-center
+        align-items-center
+      "
+    >
+      <!-- Content -->
+      <div class="container wow">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+
+          <div
+            class="
+              col-md-6
+              white-text
+              text-center text-md-left
+              mt-xl-5
+              mb-5
+              wow
+              fadeInLeft
+            "
+            data-wow-delay="0.3s"
+          >
+            <h1 class="h1-responsive font-weight-bold mt-sm-5">
+              Sports Analytics
+            </h1>
+            <hr class="hr-light" />
+
+            <a routerLink="/sports" mdbBtn color="white" mdbWavesEffect
+              >Sports</a
+            >
+            <a routerLink="/aboutus" mdbBtn color="white" mdbWavesEffect
+              >About Us</a
+            >
+          </div>
+
+          <!--Grid column-->
+          <!--Grid column-->
+          <div
+            class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight view-main"
+            data-wow-delay="0.3s"
+          >
+            <img
+              src="https://wallpapercave.com/wp/wp1862751.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+<!--carousel-->

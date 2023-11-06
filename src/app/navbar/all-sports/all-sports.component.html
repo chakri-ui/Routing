@@ -1,0 +1,147 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark bg-primary sticky-top"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand>
+    <a class="navbar-brand">
+      <img src="../assets/logo.png" height="30" alt="" />
+    </a>
+  </mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav ml-5">
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/employees" mdbWavesEffect
+          >Employees<span class="sr-only"></span
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/sports" mdbWavesEffect
+          >Sports</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/aboutus" mdbWavesEffect
+          >About US</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="/feedback" mdbWavesEffect
+          >Feedback</a
+        >
+      </li>
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->
+
+<div class="container my-5"></div>
+<div class="row mb-2">
+  <div class="col-md-3" *ngFor="let sport of selectedItemList">
+    <!-- Card -->
+    <mdb-card>
+      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+        <!-- Card img -->
+        <mdb-card-img
+          src="{{ sport.imagePath }}"
+          alt="Card image cap"
+        ></mdb-card-img>
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+      <!--Card content-->
+      <mdb-card-body>
+        <!--Text-->
+        <mdb-card-title>
+          <h5>{{ sport.name }}</h5>
+        </mdb-card-title>
+      </mdb-card-body>
+    </mdb-card>
+  </div>
+</div>
+
+<!-- Modal -->
+
+<div
+  mdbModal
+  #frame="mdbModal"
+  class="modal fade top"
+  id="frameModalTop"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-notify modal-primary" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Filter Sports</p>
+
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="frame.hide()"
+        >
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="ml-5">
+          <!-- Default checked -->
+          <div *ngFor="let sport of checkboxDataList">
+            <label class="form-check-label" for="{{ sport.name }}">
+              <input
+                mdbCheckbox
+                type="checkbox"
+                class="form-check-input"
+                (change)="onChange()"
+                [checked]="true"
+                [(ngModel)]="sport.isChecked"
+              />
+              {{ sport.name }}
+            </label>
+          </div>
+          <div class="mt-2 text-center">
+            <button
+              mdbBtn
+              type="button"
+              (click)="frame.hide()"
+              color="primary"
+              mdbWavesEffect
+            >
+              <mdb-icon far icon="save"></mdb-icon> Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+<div class="div text-center">
+  <button
+    type="button"
+    mdbBtn
+    color="primary"
+    data-toggle="modal"
+    data-target="#basicExample"
+    (click)="frame.show()"
+    mdbWavesEffect
+  >
+    <mdb-icon fas icon="filter"></mdb-icon> Filter sports
+  </button>
+</div>
